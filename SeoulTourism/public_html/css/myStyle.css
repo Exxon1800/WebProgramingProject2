@@ -14,16 +14,12 @@ p{
     font-size: 16px;
 }
 
-.navbar-default {
-    background-color: #D9D9D9;
-    border-color:#122b40;
-}
-
 /*custom navbar*/
 .navbar-custom {
     background-color:#4484CE;
     color:#ffffff;
     border-radius:0;
+    box-shadow: 1px 1px 2px #262626;
 }
 
 .navbar-custom .navbar-nav > li > a {
@@ -32,7 +28,7 @@ p{
 
 .navbar-custom .navbar-nav > .active > a {
     color: #ffffff;
-    background-color:transparent;
+    background-color: transparent;
 }
 
 .navbar-custom .navbar-nav > li > a:hover,
@@ -41,7 +37,7 @@ p{
 .navbar-custom .navbar-nav > .active > a:focus,
 .navbar-custom .navbar-nav > .open >a {
     text-decoration: none;
-    background-color: #33aa33;
+    background-color: #ac2925;
 }
 
 .navbar-custom .navbar-brand {
@@ -55,7 +51,6 @@ p{
 }
 
 /*content*/
-
 .container{
     background-color: #D9D9D9;
     border-radius: 25px;
@@ -88,6 +83,7 @@ p{
 .carousel-control.left, .carousel-control.right {
     background-image: none
 }
+
 
 video{
     width:100%;
