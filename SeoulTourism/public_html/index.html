@@ -11,72 +11,71 @@
     </head>
 
     <body>
-
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">Seoul Tourism Map</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">The List
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="page_1.html">place</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="container">
-            <div class="col-md-11" id="randomColorBackground">
-                <h1>Intro</h1>
-            </div>
-            <div class="col-md-7" id="randomColorBackground">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <!--some picture-->
-                        </div>
-
-                        <div class="item">
-                            <!--some picture-->
-                        </div>
+            <!--navigation bar ontop-->    
+            <nav class="navbar navbar-custom">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">Seoul Tourism Map</a>
                     </div>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Places
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="page_1.html">place</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+            <!--main contents of the page-->
+            <div class="container">
+
+                <div class="col-md-11">
+                    <h1>Intro</h1>
+                </div>
+
+                <div class="col-md-7" >
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <!--some picture-->
+                                <img src="resources/3-night-seoul-sightseeing-and-shopping-tour-in-seoul-146564.jpg" alt=""/>
+                            </div>
+
+                            <div class="item">
+                                <!--some picture-->
+                                <img src="resources/cheonggyecheon.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>something</h3>
+                    <p>
+                        <!--some text-->
+                    </p>
                 </div>
             </div>
-
-            <div class="col-md-4">
-                <h3>something</h3>
-                <p>
-                    <!--some text-->
-                </p>
-            </div>
-
-            <div class="col-md-11" id="randomColorBackground">
-                
-            </div>
-
         </div>
 
 
