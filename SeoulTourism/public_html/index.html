@@ -10,106 +10,42 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </head>
     <body>
-            <!--navigation bar ontop-->    
-            <nav class="navbar navbar-custom">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html">Seoul Tourism Map</a>
-                    </div>
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Places
-                                <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="page_1.html">Namsan Seoul Tower</a></li>
-                                <li><a href="page_2.html">Gyeongbokgung Palace</a></li>
-                                <li><a href="page_3.html">Bukchon Hanok Village</a></li>
-                                <li><a href="page_4.html">Lotte Tower</a></li>
-                                <li><a href="page_5.html">Jogyesa Temple</a></li>
-                                <li><a href="page_6.html">Boguensa Temple</a></li>
-                                <li><a href="page_7.html">Lotte World</a></li>
-                                <li><a href="page_8.html">Olympic Park</a></li>
-                                <li><a href="page_9.html">Sungnyemun Gate</a></li>
-                                <li><a href="page_10.html">Seoul Worldcup Stadium</a></li>
+        <!--navigation bar ontop-->    
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Seoul Tourism Map</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Places
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="page_1.html">Namsan Seoul Tower</a></li>
+                            <li><a href="page_2.html">Gyeongbokgung Palace</a></li>
+                            <li><a href="page_3.html">Bukchon Hanok Village</a></li>
+                            <li><a href="page_4.html">Lotte Tower</a></li>
+                            <li><a href="page_5.html">Jogyesa Temple</a></li>
+                            <li><a href="page_6.html">Boguensa Temple</a></li>
+                            <li><a href="page_7.html">Lotte World</a></li>
+                            <li><a href="page_8.html">Olympic Park</a></li>
+                            <li><a href="page_9.html">Sungnyemun Gate</a></li>
+                            <li><a href="page_10.html">Seoul Worldcup Stadium</a></li>
 
-                            </ul>
-                        </li>
-                    </ul>
-            </nav>
+                        </ul>
+                    </li>
+                </ul>
+        </nav>
         <!--main contents of the page-->
-
+        
         <div class="container">
-<!--            <canvas id="myCanvas"></canvas>
-            <script src="js/three.js"></script>
-            <script>
-                //RENDERER
-                var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true});
-                renderer.setClearColor(0x00ff00);
-                renderer.setPixelRatio(window.devicePixelRatio);
-                renderer.setSize(window.innerWidth, window.innerHeight);
 
-                //CAMERA
-                var camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 3000);
-                // var camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, 0.1, 3000);
-
-                //SCENE
-                var scene = new THREE.Scene();
-
-                //LIGHTS
-                var light = new THREE.AmbientLight(0xffffff, 0.5);
-                scene.add(light);
-
-                var light1 = new THREE.PointLight(0xffffff, 0.5);
-                scene.add(light1);
-                
-                // instantiate a loader
-                var loader = new THREE.ImageLoader();
-
-//                // load a image resource
-//                loader.load(
-//                        // resource URL
-//                        'resources/a.jpg',
-//                        // Function when resource is loaded
-//                        function (image) {
-//                                // do something with it
-//
-//                                // like drawing a part of it on a canvas
-//                                var canvas = document.createElement('canvas');
-//                                var context = canvas.getContext('2d');
-//                                context.drawImage(image, 100, 100);
-//                        },
-//                        // Function called when download progresses
-//                        function (xhr) {
-//                                console.log( (xhr.loaded / xhr.total * 100) + '% loaded');
-//                        },
-//                        // Function called when download errors
-//                        function (xhr) {
-//                                console.log('An error happened');
-//                        }
-//                );
-                
-
-                //OBJECT
-                var geometry = new THREE.CubeGeometry(100, 100, 100);
-                var material = new THREE.MeshLambertMaterial({color: 0xF3FFE2});
-                var mesh = new THREE.Mesh(geometry, material);
-                mesh.position.set(0, 0, -1000);
-
-                scene.add(mesh);
-
-
-                //RENDER LOOP
-                requestAnimationFrame(render);
-
-                function render() {
-                    mesh.rotation.x += 0.01;
-                    mesh.rotation.y += 0.01;
-                    renderer.render(scene, camera);
-                    requestAnimationFrame(render);
-                }
-            </script>-->
-        </div>
-
+                <div class="col-md-11">
+                    <h1>3D map of Seoul's attractions</h1>
+                </div>
+            
+        <iframe width="100%" height="80%" src="3dSeoulMap.html"></iframe>
+                </div>
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->

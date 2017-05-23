@@ -17,11 +17,6 @@ p{
     font-size: 16px;
 }
 
-/*canvas*/
-canvas{
-    background: red;  
-}
-
 /*custom navbar*/
 .navbar-custom {
     background-color:#4484CE;
