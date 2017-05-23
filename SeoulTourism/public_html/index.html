@@ -8,86 +8,112 @@
         <link href="css/myStyle.css" rel="stylesheet" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
     </head>
 
     <body>
-            <!--navigation bar ontop-->    
-            <nav class="navbar navbar-custom">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html">Seoul Tourism Map</a>
-                    </div>
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Places
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="boguensa_temple.html">Boguensa Temple</a></li>
-                                <li><a href="bukchon_hanok_village.html">Bukchon Hanok Village</a></li>
-                                <li><a href="seoul_worldcup_stadium.html">Bukhansan National Park</a></li>
-                                <li><a href="gyeongbokgung.html">Gyeongbokgung</a></li>
-                                <li><a href="jogyesa_temple.html">Jogyesa Temple</a></li>
-                                <li><a href="olympic_park.html">K-Style Hub</a></li>
-                                <li><a href="lotte_tower.html">Lotte World Tower</a></li>
-                                <li><a href="lotte_world .html">Lotte World</a></li>
-                                <li><a href="namsan_seoul_tower.html">Namsan Seoul Tower</a></li>
-                                <li><a href="olympic_park.html">Olympic Park</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+        <!--navigation bar ontop-->    
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Seoul Tourism Map</a>
                 </div>
-            </nav>
-
-            <!--main contents of the page-->
-            <div class="container">
-
-                <div class="col-md-11">
-                    <h1>Title</h1>
-                </div>
-
-                <div class="col-md-7" >
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                        </ol>
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <!--some picture-->
-                                <img src="resources/3-night-seoul-sightseeing-and-shopping-tour-in-seoul-146564.jpg" alt=""/>
-                            </div>
-
-                            <div class="item">
-                                <!--some picture-->
-                                <img src="resources/cheonggyecheon.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Places
+                            <span class="caret"></span>
                         </a>
-                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <h3>Welcome to Seoul Tourism map</h3>
-                    <p>
-                        <!--some text-->
-                    </p>
-                </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="boguensa_temple.html">Boguensa Temple</a></li>
+                            <li><a href="bukchon_hanok_village.html">Bukchon Hanok Village</a></li>
+                            <li><a href="seoul_worldcup_stadium.html">Bukhansan National Park</a></li>
+                            <li><a href="gyeongbokgung.html">Gyeongbokgung</a></li>
+                            <li><a href="jogyesa_temple.html">Jogyesa Temple</a></li>
+                            <li><a href="olympic_park.html">K-Style Hub</a></li>
+                            <li><a href="lotte_tower.html">Lotte World Tower</a></li>
+                            <li><a href="lotte_world .html">Lotte World</a></li>
+                            <li><a href="namsan_seoul_tower.html">Namsan Seoul Tower</a></li>
+                            <li><a href="olympic_park.html">Olympic Park</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
 
+        <!--main contents of the page-->
+
+        <div class="container">
+            <canvas id="myCanvas"></canvas>
+            <script src="js/three.js"></script>
+            <script>
+                //RENDERER
+                var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true});
+                renderer.setClearColor(0x00ff00);
+                renderer.setPixelRatio(window.devicePixelRatio);
+                renderer.setSize(window.innerWidth, window.innerHeight);
+
+                //CAMERA
+                var camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 3000);
+                // var camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, 0.1, 3000);
+
+                //SCENE
+                var scene = new THREE.Scene();
+
+                //LIGHTS
+                var light = new THREE.AmbientLight(0xffffff, 0.5);
+                scene.add(light);
+
+                var light1 = new THREE.PointLight(0xffffff, 0.5);
+                scene.add(light1);
+                
+                // instantiate a loader
+                var loader = new THREE.ImageLoader();
+
+//                // load a image resource
+//                loader.load(
+//                        // resource URL
+//                        'resources/a.jpg',
+//                        // Function when resource is loaded
+//                        function (image) {
+//                                // do something with it
+//
+//                                // like drawing a part of it on a canvas
+//                                var canvas = document.createElement('canvas');
+//                                var context = canvas.getContext('2d');
+//                                context.drawImage(image, 100, 100);
+//                        },
+//                        // Function called when download progresses
+//                        function (xhr) {
+//                                console.log( (xhr.loaded / xhr.total * 100) + '% loaded');
+//                        },
+//                        // Function called when download errors
+//                        function (xhr) {
+//                                console.log('An error happened');
+//                        }
+//                );
+                
+
+                //OBJECT
+                var geometry = new THREE.CubeGeometry(100, 100, 100);
+                var material = new THREE.MeshLambertMaterial({color: 0xF3FFE2});
+                var mesh = new THREE.Mesh(geometry, material);
+                mesh.position.set(0, 0, -1000);
+
+                scene.add(mesh);
+
+
+                //RENDER LOOP
+                requestAnimationFrame(render);
+
+                function render() {
+                    mesh.rotation.x += 0.01;
+                    mesh.rotation.y += 0.01;
+                    renderer.render(scene, camera);
+                    requestAnimationFrame(render);
+                }
+            </script>
+        </div>
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
